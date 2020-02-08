@@ -1,6 +1,5 @@
 from db import db
 
-
 class ItemModel(db.Model):
     __tablename__ = 'items'
 
@@ -17,7 +16,7 @@ class ItemModel(db.Model):
         self.store_id = store_id
 
     def json(self):
-        return {'name': self.name, 'price': self.price,'id':self.id,'store_id':self.store_id}
+        return {'name': self.name, 'price': self.price}
 
     @classmethod
     def find_by_name(cls, name):
